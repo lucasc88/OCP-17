@@ -28,8 +28,15 @@ public class Test {
 	
 	// \" just put a " symbol. \n is a new line
 	static String eyeTest = "\"Java Study Guide\"\n   by Scott & Jeanne";
+	
+	//var name = "asd"; //DOES NOT compile. var can be used only as a local variable
 
 	public static void main(String args[]) {
+		var var = "just a local var"; // var is NOT a reserved word
+		// validLocalVariableAsVar = 2; DOES NOT COMPILE. Initially was set as a String
+		// var requires an value when it's declared.
+		// var nullVariable = null; DOES NOT COMPILE
+		
 		System.out.println("All number will be 495");
 		System.out.println("decimal: " + decimal);
 		System.out.println("hexa: " + hexa);
@@ -40,4 +47,10 @@ public class Test {
 		System.out.println(pyramid);
 		System.out.println(eyeTest);
 	}
+	
+	// var is not allowed as a parameter
+//	public int sum(var a, var b) {
+//		return a + b;
+//	}
+	
 }
