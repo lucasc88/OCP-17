@@ -1,6 +1,11 @@
 package chapter1;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Test {
+	
+	private String name = "Lucas";
 
 	// Decimal declaration and possible chars are [0-9]
 	static int decimal = 495;
@@ -23,8 +28,7 @@ public class Test {
 	static String pyramid = """
 			  *
 			 ***
-			*****
-			""";
+			*****""";
 	
 	// \" just put a " symbol. \n is a new line
 	static String eyeTest = "\"Java Study Guide\"\n   by Scott & Jeanne";
@@ -36,6 +40,8 @@ public class Test {
 		// validLocalVariableAsVar = 2; DOES NOT COMPILE. Initially was set as a String
 		// var requires an value when it's declared.
 		// var nullVariable = null; DOES NOT COMPILE
+		// var canBeNullAfterInitializedWithWrapperClass = "String";
+		// canBeNullAfterInitializedWithWrapperClass = null; DOES COMPILE
 		
 		System.out.println("All number will be 495");
 		System.out.println("decimal: " + decimal);
@@ -46,6 +52,11 @@ public class Test {
 		System.out.println("Pyramid: ");
 		System.out.println(pyramid);
 		System.out.println(eyeTest);
+		
+		Test t = new Test();
+		t.changeName(t);
+		System.out.println(t.name);		
+		
 	}
 	
 	// var is not allowed as a parameter
@@ -53,4 +64,7 @@ public class Test {
 //		return a + b;
 //	}
 	
+	String changeName(Test t) {
+		return t.name = " has other name now.";
+	}
 }
